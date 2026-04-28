@@ -1,4 +1,4 @@
-import { MessageCircle, X, Send } from "lucide-react";
+import { MessageCircle, X, Send, Sparkles } from "lucide-react";
 import { useState, useRef, useEffect, FormEvent } from "react";
 
 type Msg = { role: "bot" | "user"; text: string };
@@ -81,6 +81,8 @@ export function FloatingCall() {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [typing, setTyping] = useState(false);
+  const [showFabHint, setShowFabHint] = useState(true);
+  const [fabHintEntered, setFabHintEntered] = useState(false);
   const [messages, setMessages] = useState<Msg[]>([
     {
       role: "bot",
@@ -93,10 +95,16 @@ export function FloatingCall() {
     scrollRef.current?.scrollTo({ top: scrollRef.current.scrollHeight, behavior: "smooth" });
   }, [messages, open, typing]);
 
+  useEffect(() => {
+    const id = window.setTimeout(() => setFabHintEntered(true), 450);
+    return () => window.clearTimeout(id);
+  }, []);
+
   const send = (e: FormEvent) => {
     e.preventDefault();
     const text = input.trim();
     if (!text || typing) return;
+    setShowFabHint(false);
     setInput("");
     setMessages((m) => [...m, { role: "user", text }]);
     setTyping(true);
@@ -177,11 +185,49 @@ export function FloatingCall() {
         </div>
       )}
 
+      {!open && showFabHint && fabHintEntered && (
+        <div
+          className="fixed bottom-[6.25rem] right-4 sm:right-6 z-[45] w-[calc(100vw-2rem)] max-w-[300px] animate-in fade-in slide-in-from-bottom-2 duration-500"
+          role="status"
+        >
+          <div className="relative rounded-2xl border border-primary/35 bg-card px-3.5 py-3 pr-9 shadow-elegant">
+            <div
+              className="absolute -bottom-1.5 right-10 h-3 w-3 rotate-45 border-b border-r border-primary/35 bg-card"
+              aria-hidden
+            />
+            <div className="flex items-start gap-2.5">
+              <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary">
+                <Sparkles className="h-4 w-4" aria-hidden />
+              </span>
+              <p className="text-xs sm:text-sm leading-snug text-foreground pt-0.5">
+                <span className="font-semibold">Натисніть і напишіть сюди</span>
+                {" — "}
+                наш ШІ-консультант допоможе прорахувати розміри, комплектацію та бюджет.
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => setShowFabHint(false)}
+              className="absolute right-1.5 top-1.5 flex h-7 w-7 items-center justify-center rounded-lg text-muted-foreground hover:bg-secondary hover:text-foreground transition-colors"
+              aria-label="Закрити підказку"
+            >
+              <X className="h-3.5 w-3.5" />
+            </button>
+          </div>
+        </div>
+      )}
+
       <button
         type="button"
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => {
+          setOpen((v) => {
+            const next = !v;
+            if (next) setShowFabHint(false);
+            return next;
+          });
+        }}
         aria-label={open ? "Закрити чат" : "Відкрити чат"}
-        className="fixed bottom-6 right-6 z-40 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-primary text-primary-foreground shadow-elegant hover:scale-105 transition-transform"
+        className="fixed bottom-6 right-4 sm:right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-primary text-primary-foreground shadow-elegant hover:scale-105 transition-transform"
       >
         {!open && <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-30" />}
         {open ? <X className="h-7 w-7 relative" /> : <MessageCircle className="h-7 w-7 relative" />}
