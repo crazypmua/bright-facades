@@ -1,4 +1,5 @@
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useState } from "react";
+import { Sparkles, X } from "lucide-react";
 
 type Message = {
   role: "assistant" | "user";
@@ -90,6 +91,8 @@ export function AIConsultant() {
     },
   ]);
   const [chatInput, setChatInput] = useState("");
+  const [showChatHint, setShowChatHint] = useState(true);
+  const [hintEntered, setHintEntered] = useState(false);
 
   const [leadName, setLeadName] = useState("");
   const [leadPhone, setLeadPhone] = useState("");
@@ -112,10 +115,17 @@ export function AIConsultant() {
     [basePricePerM2, height, selectedFactor, width, withInstall],
   );
 
+  useEffect(() => {
+    const id = window.setTimeout(() => setHintEntered(true), 450);
+    return () => window.clearTimeout(id);
+  }, []);
+
   const handleChatSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const trimmed = chatInput.trim();
     if (!trimmed) return;
+
+    setShowChatHint(false);
 
     const nextMessages: Message[] = [...messages, { role: "user", text: trimmed }];
     const dimensions = parseDimensions(trimmed);
@@ -279,13 +289,42 @@ export function AIConsultant() {
                 ))}
               </div>
 
+              {showChatHint && hintEntered && (
+                <div
+                  className="relative mt-4 animate-in fade-in slide-in-from-bottom-2 duration-500 fill-mode-both"
+                  role="status"
+                >
+                  <div className="relative rounded-2xl border border-primary/35 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent px-4 py-3 pr-10 shadow-soft shadow-primary/10">
+                    <div className="absolute -bottom-1.5 left-6 h-3 w-3 rotate-45 border-b border-r border-primary/35 bg-primary/5" aria-hidden />
+                    <div className="flex items-start gap-2.5">
+                      <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary">
+                        <Sparkles className="h-4 w-4" aria-hidden />
+                      </span>
+                      <p className="text-sm leading-snug text-foreground pt-0.5">
+                        <span className="font-semibold">Напишіть сюди</span>
+                        {" — "}
+                        наш ШІ-консультант допоможе все прорахувати: розміри, комплектацію та орієнтовний бюджет.
+                      </p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => setShowChatHint(false)}
+                      className="absolute right-2 top-2 flex h-8 w-8 items-center justify-center rounded-lg text-muted-foreground hover:bg-background/80 hover:text-foreground transition-colors"
+                      aria-label="Закрити підказку"
+                    >
+                      <X className="h-4 w-4" />
+                    </button>
+                  </div>
+                </div>
+              )}
+
               <form onSubmit={handleChatSubmit} className="mt-4 flex flex-col sm:flex-row gap-3">
                 <input
                   type="text"
                   value={chatInput}
                   onChange={(e) => setChatInput(e.target.value)}
                   placeholder="Наприклад: 1500x1400, чому так дорого, яка гарантія?"
-                  className="h-12 flex-1 rounded-xl border border-border bg-background px-4 text-sm"
+                  className="h-12 flex-1 rounded-xl border border-border bg-background px-4 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
                 />
                 <button
                   type="submit"
