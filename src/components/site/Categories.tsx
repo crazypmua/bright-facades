@@ -1,21 +1,19 @@
-import { ArrowUpRight, Square, DoorOpen, Building2 } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import bannerImg from "@/assets/banner-categories.jpg";
 
 const cats = [
   {
     id: "pvc",
-    icon: Square,
     title: "ПВХ системи",
     items: ["Вікна", "Двері", "Розсувні системи"],
   },
   {
     id: "aluminum",
-    icon: DoorOpen,
     title: "Алюмінієві системи",
     items: ["Вікна", "Двері", "Розсувні системи"],
   },
   {
     id: "facade",
-    icon: Building2,
     title: "Фасадні системи",
     items: ["Структурне скління", "Стоєчно-ригельні", "Вентильовані фасади"],
   },
@@ -34,6 +32,18 @@ export function Categories() {
           </h2>
         </div>
 
+        <div className="relative w-full rounded-3xl overflow-hidden shadow-elegant mb-8 lg:mb-12 aspect-[21/9]">
+          <img
+            src={bannerImg}
+            alt="Сучасні віконні та фасадні рішення"
+            width={1920}
+            height={640}
+            loading="lazy"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-transparent" />
+        </div>
+
         <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
           {cats.map((c) => (
             <a
@@ -43,10 +53,7 @@ export function Categories() {
             >
               <div className="absolute -top-20 -right-20 h-48 w-48 rounded-full bg-gradient-primary opacity-0 group-hover:opacity-10 blur-2xl transition-opacity" />
               <div className="relative">
-                <div className="flex items-start justify-between mb-8">
-                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-primary text-primary-foreground shadow-elegant">
-                    <c.icon className="h-7 w-7" />
-                  </div>
+                <div className="flex items-start justify-end mb-8">
                   <ArrowUpRight className="h-6 w-6 text-muted-foreground group-hover:text-primary group-hover:rotate-45 transition-all" />
                 </div>
                 <h3 className="font-display font-extrabold text-2xl lg:text-3xl mb-4">{c.title}</h3>
