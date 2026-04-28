@@ -1,8 +1,19 @@
 import { BadgeCheck } from "lucide-react";
-import cert1 from "@/assets/certificates-1.png";
-import cert2 from "@/assets/certificates-2.png";
+import certAxor from "@/assets/cert-axor.png";
+import certSalamander from "@/assets/cert-salamander.png";
 
 const partners = ["REHAU", "Schüco", "Reynaers", "Veka", "Roto", "Maco", "Alutech", "WDS"];
+
+const certImages = [
+  { src: certAxor, alt: "Сертифікат відповідності AXOR KOMFORT LINE K-3" },
+  { src: certSalamander, alt: "Сертифікат відповідності Salamander" },
+  { src: certAxor, alt: "Сертифікат відповідності AXOR — фурнітура" },
+  { src: certSalamander, alt: "Сертифікат відповідності Salamander — профіль" },
+  { src: certAxor, alt: "Сертифікат відповідності AXOR — балконні блоки" },
+  { src: certSalamander, alt: "Сертифікат відповідності Salamander — серія" },
+  { src: certAxor, alt: "Сертифікат відповідності AXOR — поворотно-відкидні" },
+  { src: certSalamander, alt: "Сертифікат відповідності Salamander — Укрекспертиза" },
+];
 
 export function Certificates() {
   return (
@@ -21,33 +32,27 @@ export function Certificates() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-5 lg:gap-6 mb-12">
-          <a
-            href={cert1}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block rounded-3xl overflow-hidden border border-border bg-card shadow-card hover:shadow-elegant transition-all"
-          >
-            <img
-              src={cert1}
-              alt="Сертифікати відповідності — профільні системи"
-              loading="lazy"
-              className="w-full h-auto group-hover:scale-[1.02] transition-transform duration-500"
-            />
-          </a>
-          <a
-            href={cert2}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block rounded-3xl overflow-hidden border border-border bg-card shadow-card hover:shadow-elegant transition-all"
-          >
-            <img
-              src={cert2}
-              alt="Свідоцтва про реєстрацію та документи компанії"
-              loading="lazy"
-              className="w-full h-auto group-hover:scale-[1.02] transition-transform duration-500"
-            />
-          </a>
+        <div className="rounded-3xl bg-card border border-border shadow-card p-5 sm:p-7 lg:p-9 mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
+            {certImages.map((c, i) => (
+              <a
+                key={i}
+                href={c.src}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block rounded-xl overflow-hidden border border-border bg-background hover:border-primary/40 hover:shadow-elegant transition-all"
+              >
+                <div className="aspect-[3/4] overflow-hidden">
+                  <img
+                    src={c.src}
+                    alt={c.alt}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
 
         <div className="flex items-center gap-3 mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-muted-foreground">
