@@ -53,7 +53,7 @@ export function Categories() {
             >
               <div className="absolute -top-20 -right-20 h-48 w-48 rounded-full bg-gradient-primary opacity-0 group-hover:opacity-10 blur-2xl transition-opacity" />
               <div className="relative">
-                <div className="flex items-start justify-end mb-8">
+                <div className="flex items-start justify-end mb-4">
                   <ArrowUpRight className="h-6 w-6 text-muted-foreground group-hover:text-primary group-hover:rotate-45 transition-all" />
                 </div>
                 <h3 className="font-display font-extrabold text-2xl lg:text-3xl mb-4">{c.title}</h3>
