@@ -179,7 +179,7 @@ export function AIConsultant() {
               <div className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-3">
                 AI консультант
               </div>
-              <h2 className="font-display text-3xl lg:text-5xl font-extrabold tracking-tight mb-4">
+              <h2 className="reveal font-display text-3xl lg:text-5xl font-extrabold tracking-tight mb-4">
                 Онлайн продажник по вікнах на чистому JS
               </h2>
               <p className="text-muted-foreground text-lg">

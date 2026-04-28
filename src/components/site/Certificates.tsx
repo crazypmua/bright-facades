@@ -42,7 +42,7 @@ export function Certificates() {
             <BadgeCheck className="h-5 w-5" />
             Сертифікати та документи
           </div>
-          <h2 className="font-display text-3xl lg:text-5xl font-extrabold tracking-tight">
+          <h2 className="reveal font-display text-3xl lg:text-5xl font-extrabold tracking-tight">
             З нами надійно
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">

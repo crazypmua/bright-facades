@@ -27,7 +27,7 @@ export function Categories() {
           <div className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-3">
             Наші рішення
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+          <h2 className="reveal font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
             Оберіть категорію
           </h2>
         </div>

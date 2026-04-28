@@ -27,7 +27,7 @@ export function Reviews() {
             <div className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-3">
               Відгуки
             </div>
-            <h2 className="font-display text-3xl lg:text-5xl font-extrabold tracking-tight">
+            <h2 className="reveal font-display text-3xl lg:text-5xl font-extrabold tracking-tight">
               Понад 2 400 щасливих клієнтів
             </h2>
           </div>

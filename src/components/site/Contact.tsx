@@ -37,7 +37,7 @@ export function Contact() {
             <div className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-3">
               Зв'язатися з нами
             </div>
-            <h2 className="font-display text-3xl lg:text-5xl font-extrabold tracking-tight mb-6">
+            <h2 className="reveal font-display text-3xl lg:text-5xl font-extrabold tracking-tight mb-6">
               Безкоштовна консультація та вимір
             </h2>
             <p className="text-muted-foreground text-lg mb-8">

@@ -97,14 +97,14 @@ export function Hero() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 lg:pt-28 pb-20 lg:pb-32">
         <div className="max-w-2xl">
-          <h1 className="text-balance font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.05] tracking-tight">
+          <h1 className="reveal text-balance font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.05] tracking-tight">
             Сучасні віконні та <span className="text-primary">фасадні</span> рішення
           </h1>
-          <p className="mt-6 text-lg lg:text-xl text-muted-foreground max-w-xl text-balance">
+          <p className="reveal reveal-delay-1 mt-6 text-lg lg:text-xl text-muted-foreground max-w-xl text-balance">
             ПВХ, алюмінієві системи, двері та фасади. Виробництво, монтаж та сервіс під ключ по всій Україні.
           </p>
 
-          <div className="mt-8 flex flex-col sm:flex-row gap-3">
+          <div className="reveal reveal-delay-2 mt-8 flex flex-col sm:flex-row gap-3">
             <a
               href="#calculator"
               className="inline-flex items-center justify-center gap-2 h-14 px-7 rounded-full bg-gradient-primary text-primary-foreground font-semibold text-base shadow-elegant hover:opacity-95 transition"
@@ -121,7 +121,7 @@ export function Hero() {
             </a>
           </div>
 
-          <div className="mt-10 grid grid-cols-3 gap-6 max-w-lg">
+          <div className="reveal reveal-delay-3 mt-10 grid grid-cols-3 gap-6 max-w-lg">
             {[
               { icon: Award, k: "12+", v: "років досвіду" },
               { icon: Shield, k: "10 років", v: "гарантії" },

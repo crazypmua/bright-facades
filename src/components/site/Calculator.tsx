@@ -41,7 +41,7 @@ export function Calculator() {
             <div className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-3">
               Калькулятор
             </div>
-            <h2 className="font-display text-3xl lg:text-5xl font-extrabold tracking-tight mb-4">
+            <h2 className="reveal font-display text-3xl lg:text-5xl font-extrabold tracking-tight mb-4">
               Розрахуйте вартість за 30 секунд
             </h2>
             <p className="text-muted-foreground text-lg">
