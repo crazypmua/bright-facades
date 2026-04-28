@@ -12,6 +12,7 @@ import { Contact } from "@/components/site/Contact";
 import { Footer } from "@/components/site/Footer";
 import { FloatingCall } from "@/components/site/FloatingCall";
 import { Toaster } from "@/components/ui/sonner";
+import { useReveal } from "@/hooks/use-reveal";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,6 +31,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  useReveal();
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
