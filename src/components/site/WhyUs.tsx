@@ -18,7 +18,7 @@ export function WhyUs() {
           <div className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-3">
             Чому ELITE SPACE
           </div>
-          <h2 className="font-display text-3xl lg:text-5xl font-extrabold tracking-tight">
+          <h2 className="reveal font-display text-3xl lg:text-5xl font-extrabold tracking-tight">
             6 причин обрати нас
           </h2>
         </div>
