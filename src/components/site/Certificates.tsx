@@ -1,4 +1,5 @@
-import { BadgeCheck } from "lucide-react";
+import { BadgeCheck, X } from "lucide-react";
+import { useEffect, useState } from "react";
 import certAxor from "@/assets/cert-axor.png";
 import certSalamander from "@/assets/cert-salamander.png";
 
@@ -16,6 +17,23 @@ const certImages = [
 ];
 
 export function Certificates() {
+  const [active, setActive] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (active === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setActive(null);
+      if (e.key === "ArrowRight") setActive((i) => (i === null ? null : (i + 1) % certImages.length));
+      if (e.key === "ArrowLeft") setActive((i) => (i === null ? null : (i - 1 + certImages.length) % certImages.length));
+    };
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [active]);
+
   return (
     <section className="py-16 lg:py-24 border-y border-border bg-secondary/30">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -35,12 +53,12 @@ export function Certificates() {
         <div className="rounded-3xl bg-card border border-border shadow-card p-5 sm:p-7 lg:p-9 mb-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 lg:gap-6">
             {certImages.map((c, i) => (
-              <a
+              <button
                 key={i}
-                href={c.src}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group block rounded-xl overflow-hidden border border-border bg-background hover:border-primary/40 hover:shadow-elegant transition-all"
+                type="button"
+                onClick={() => setActive(i)}
+                aria-label={`Відкрити: ${c.alt}`}
+                className="group block rounded-xl overflow-hidden border border-border bg-background hover:border-primary/40 hover:shadow-elegant transition-all text-left"
               >
                 <div className="aspect-[3/4] overflow-hidden">
                   <img
@@ -50,7 +68,7 @@ export function Certificates() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-              </a>
+              </button>
             ))}
           </div>
         </div>
@@ -70,6 +88,30 @@ export function Certificates() {
           ))}
         </div>
       </div>
+
+      {active !== null && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          onClick={() => setActive(null)}
+          className="fixed inset-0 z-[100] bg-black/85 backdrop-blur-sm flex items-center justify-center p-4 sm:p-8 animate-in fade-in duration-200"
+        >
+          <button
+            type="button"
+            onClick={() => setActive(null)}
+            aria-label="Закрити"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 h-11 w-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
+          >
+            <X className="h-5 w-5" />
+          </button>
+          <img
+            src={certImages[active].src}
+            alt={certImages[active].alt}
+            onClick={(e) => e.stopPropagation()}
+            className="max-h-[90vh] max-w-[92vw] object-contain rounded-lg shadow-2xl"
+          />
+        </div>
+      )}
     </section>
   );
 }
