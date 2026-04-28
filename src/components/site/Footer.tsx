@@ -1,14 +1,13 @@
+import logo from "@/assets/logo-elite-space.webp";
+
 export function Footer() {
   return (
     <footer className="bg-foreground text-background/80 py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-10">
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-primary">
-                <span className="font-display font-extrabold text-primary-foreground">V</span>
-              </div>
-              <div className="font-display font-extrabold text-lg text-background">VITRO</div>
+            <div className="mb-4 inline-flex bg-background rounded-lg px-3 py-2">
+              <img src={logo} alt="ELITE SPACE" width={140} height={42} className="h-8 w-auto" />
             </div>
             <p className="text-sm">Преміум вікна, двері та фасадні системи в Україні.</p>
           </div>

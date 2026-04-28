@@ -1,4 +1,5 @@
 import { Factory, Ruler, Truck, Wrench, ShieldCheck, Sparkles } from "lucide-react";
+import bannerImg from "@/assets/banner-whyus.jpg";
 
 const items = [
   { icon: Factory, t: "Власне виробництво", d: "Контроль якості на кожному етапі — від профілю до пакування." },
@@ -13,14 +14,27 @@ export function WhyUs() {
   return (
     <section className="py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="max-w-2xl mb-12">
+        <div className="max-w-2xl mb-10 lg:mb-12">
           <div className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-3">
-            Чому VITRO
+            Чому ELITE SPACE
           </div>
           <h2 className="font-display text-3xl lg:text-5xl font-extrabold tracking-tight">
             6 причин обрати нас
           </h2>
         </div>
+
+        <div className="relative w-full rounded-3xl overflow-hidden shadow-elegant mb-8 lg:mb-12 aspect-[21/9]">
+          <img
+            src={bannerImg}
+            alt="Професійний монтаж преміум вікон"
+            width={1920}
+            height={640}
+            loading="lazy"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-transparent" />
+        </div>
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
           {items.map((i) => (
             <div

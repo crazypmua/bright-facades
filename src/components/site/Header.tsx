@@ -1,5 +1,6 @@
 import { Phone, Send, MessageCircle, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import logo from "@/assets/logo-elite-space.webp";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -31,15 +32,13 @@ export function Header() {
         <div className="flex h-16 lg:h-20 items-center justify-between gap-4">
           {/* Logo */}
           <a href="#top" className="flex items-center gap-3 shrink-0">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-primary shadow-elegant">
-              <span className="text-primary-foreground font-display font-extrabold text-lg">V</span>
-            </div>
-            <div className="hidden sm:block leading-tight">
-              <div className="font-display font-extrabold text-lg tracking-tight">VITRO</div>
-              <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
-                Вікна · Двері · Фасади
-              </div>
-            </div>
+            <img
+              src={logo}
+              alt="ELITE SPACE"
+              width={160}
+              height={48}
+              className="h-9 lg:h-10 w-auto"
+            />
           </a>
 
           {/* Nav */}
