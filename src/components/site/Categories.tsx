@@ -1,0 +1,68 @@
+import { ArrowUpRight, Square, DoorOpen, Building2 } from "lucide-react";
+
+const cats = [
+  {
+    id: "pvc",
+    icon: Square,
+    title: "ПВХ системи",
+    items: ["Вікна", "Двері", "Розсувні системи"],
+  },
+  {
+    id: "aluminum",
+    icon: DoorOpen,
+    title: "Алюмінієві системи",
+    items: ["Вікна", "Двері", "Розсувні системи"],
+  },
+  {
+    id: "facade",
+    icon: Building2,
+    title: "Фасадні системи",
+    items: ["Структурне скління", "Стоєчно-ригельні", "Вентильовані фасади"],
+  },
+];
+
+export function Categories() {
+  return (
+    <section className="bg-gradient-fade py-16 lg:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="max-w-2xl mb-10 lg:mb-14">
+          <div className="text-sm font-semibold uppercase tracking-[0.2em] text-primary mb-3">
+            Наші рішення
+          </div>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight">
+            Оберіть категорію
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
+          {cats.map((c) => (
+            <a
+              key={c.id}
+              href={`#${c.id}`}
+              className="group relative overflow-hidden rounded-3xl border border-border bg-card p-7 lg:p-8 shadow-card hover:shadow-elegant hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="absolute -top-20 -right-20 h-48 w-48 rounded-full bg-gradient-primary opacity-0 group-hover:opacity-10 blur-2xl transition-opacity" />
+              <div className="relative">
+                <div className="flex items-start justify-between mb-8">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-primary text-primary-foreground shadow-elegant">
+                    <c.icon className="h-7 w-7" />
+                  </div>
+                  <ArrowUpRight className="h-6 w-6 text-muted-foreground group-hover:text-primary group-hover:rotate-45 transition-all" />
+                </div>
+                <h3 className="font-display font-extrabold text-2xl lg:text-3xl mb-4">{c.title}</h3>
+                <ul className="space-y-2">
+                  {c.items.map((it) => (
+                    <li key={it} className="flex items-center gap-2 text-muted-foreground">
+                      <span className="h-1 w-1 rounded-full bg-primary" />
+                      {it}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
