@@ -1,0 +1,11 @@
+# SPA fallback for Apache (typical PHP shared hosting).
+# Upload the contents of dist/client to the site root (or set RewriteBase if in a subfolder).
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
