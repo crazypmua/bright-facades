@@ -112,15 +112,18 @@ export function Calculator() {
             <div className="mt-8 rounded-2xl bg-foreground text-background p-6 lg:p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
               <div>
                 <div className="text-sm uppercase tracking-[0.2em] text-background/60 mb-1">
-                  Орієнтовна вартість
+                  Приблизна загальна сума
                 </div>
                 <div className="font-display font-extrabold text-4xl lg:text-5xl">
-                  {total.toLocaleString("uk-UA")} <span className="text-primary">₴</span>
+                  ≈ {total.toLocaleString("uk-UA")} <span className="text-primary">₴</span>
+                </div>
+                <div className="text-xs text-background/50 mt-2">
+                  Орієнтовно. Точна вартість — після безкоштовного виміру майстра.
                 </div>
               </div>
               <a
-                href="tel:+380441234567"
-                className="inline-flex items-center justify-center gap-2 h-14 px-7 rounded-full bg-gradient-primary text-primary-foreground font-semibold shadow-elegant whitespace-nowrap"
+                href="tel:+380982018981"
+                className="inline-flex items-center justify-center gap-2 h-14 px-7 rounded-full bg-gradient-primary text-primary-foreground font-bold shadow-elegant whitespace-nowrap hover:scale-[1.03] transition-transform"
               >
                 <Phone className="h-5 w-5" />
                 Точний розрахунок

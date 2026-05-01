@@ -1,4 +1,4 @@
-import logo from "@/assets/logo-elite-space.webp";
+import logoMark from "@/assets/logo-elite-mark.png";
 
 export function Footer() {
   return (
@@ -6,18 +6,37 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-10">
           <div>
-            <div className="mb-4 inline-flex bg-background rounded-lg px-3 py-2">
-              <img src={logo} alt="ELITE SPACE" width={140} height={42} className="h-8 w-auto" />
+            <div className="flex items-center gap-3 mb-4">
+              <div className="bg-background rounded-full p-1.5">
+                <img src={logoMark} alt="Elite Space" width={40} height={40} className="h-10 w-10" />
+              </div>
+              <span className="font-brand text-2xl font-bold text-azure">Elite Space</span>
             </div>
-            <p className="text-sm">Преміум вікна, двері та фасадні системи в Україні.</p>
+            <p className="text-sm italic mb-2">«Елітний Простір — Наповнений Природним Світлом»</p>
+            <p className="text-xs text-background/50">Партнер EKIPAZH — найбільшого виробника вікон в Україні.</p>
           </div>
-          <FooterCol title="Продукція" items={["ПВХ вікна", "Алюмінієві вікна", "Двері", "Фасади"]} />
-          <FooterCol title="Компанія" items={["Про нас", "Проєкти", "Сертифікати", "Контакти"]} />
-          <FooterCol title="Контакти" items={["+380 44 123 45 67", "info@vitro.ua", "Київ, Промислова, 12"]} />
+          <FooterCol
+            title="Продукція"
+            items={["Металопластикові вікна", "Алюмінієві системи", "Двері", "Фасади"]}
+          />
+          <FooterCol
+            title="Бренди"
+            items={["EKIPAZH", "WDS", "VEKA", "ALUMIL"]}
+          />
+          <div>
+            <h4 className="font-display font-bold text-background mb-4">Контакти</h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="tel:+380982018981" className="hover:text-primary transition-colors">+380 98 201 89 81</a></li>
+              <li><a href="tel:+380971753288" className="hover:text-primary transition-colors">+380 97 175 32 88</a></li>
+              <li><a href="https://elitespacegroup.com/" className="hover:text-primary transition-colors">elitespacegroup.com</a></li>
+              <li><a href="https://t.me/EliteWindowsEkipazh" className="hover:text-primary transition-colors">Telegram-канал</a></li>
+              <li><a href="https://www.instagram.com/elitespace_ekipazh" className="hover:text-primary transition-colors">Instagram</a></li>
+            </ul>
+          </div>
         </div>
         <div className="mt-10 pt-6 border-t border-background/10 text-sm text-background/50 flex flex-col sm:flex-row justify-between gap-3">
-          <div>© {new Date().getFullYear()} VITRO. Всі права захищені.</div>
-          <div>Зроблено з турботою про ваш дім</div>
+          <div>© {new Date().getFullYear()} Elite Space · Ekipazh. Всі права захищені.</div>
+          <div>Виготовлення вікон за 4 робочих дні</div>
         </div>
       </div>
     </footer>

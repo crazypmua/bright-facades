@@ -45,11 +45,12 @@ export function Contact() {
             </p>
 
             <div className="space-y-4">
-              <Info icon={Phone} title="+380 44 123 45 67" sub="Пн–Сб, 9:00–20:00" href="tel:+380441234567" />
-              <Info icon={Send} title="@vitro_ua" sub="Telegram" href="https://t.me/vitro" />
-              <Info icon={MessageCircle} title="WhatsApp" sub="+380 67 123 45 67" href="https://wa.me/380671234567" />
-              <Info icon={Mail} title="info@vitro.ua" sub="Електронна пошта" href="mailto:info@vitro.ua" />
-              <Info icon={MapPin} title="м. Київ, вул. Промислова, 12" sub="Шоурум та офіс" />
+              <Info icon={Phone} title="+380 98 201 89 81" sub="Пн–Сб, 9:00–20:00" href="tel:+380982018981" />
+              <Info icon={Phone} title="+380 97 175 32 88" sub="Менеджер відділу продажів" href="tel:+380971753288" />
+              <Info icon={Send} title="Telegram-канал" sub="@EliteWindowsEkipazh" href="https://t.me/EliteWindowsEkipazh" />
+              <Info icon={MessageCircle} title="Instagram" sub="@elitespace_ekipazh" href="https://www.instagram.com/elitespace_ekipazh" />
+              <Info icon={Mail} title="elitespacegroup.com" sub="Офіційний сайт" href="https://elitespacegroup.com/" />
+              <Info icon={MapPin} title="Київ та по всій Україні" sub="Виїзд майстра — безкоштовно" />
             </div>
           </div>
 
