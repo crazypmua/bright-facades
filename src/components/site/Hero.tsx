@@ -102,7 +102,7 @@ export function Hero() {
             Виготовлення за 4 робочих дні
           </div>
           <h1 className="reveal text-balance font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.05] tracking-tight">
-            <span className="text-azure">Металопластикові</span> вікна та <span className="text-primary">фасадні</span> рішення
+            <span className="text-primary">Металопластикові</span> вікна та <span className="text-primary">фасадні</span> рішення
           </h1>
           <p className="reveal reveal-delay-1 mt-6 text-lg lg:text-xl text-muted-foreground max-w-xl text-balance">
             EKIPAZH, WDS, VEKA, ALUMIL — оригінальні профілі. Власне виробництво, монтаж і сервіс під ключ по всій Україні.
