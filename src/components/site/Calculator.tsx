@@ -122,8 +122,8 @@ export function Calculator() {
                 </div>
               </div>
               <a
-                href="tel:+380441234567"
-                className="inline-flex items-center justify-center gap-2 h-14 px-7 rounded-full bg-gradient-primary text-primary-foreground font-semibold shadow-elegant whitespace-nowrap"
+                href="tel:+380982018981"
+                className="inline-flex items-center justify-center gap-2 h-14 px-7 rounded-full bg-gradient-primary text-primary-foreground font-bold shadow-elegant whitespace-nowrap hover:scale-[1.03] transition-transform"
               >
                 <Phone className="h-5 w-5" />
                 Точний розрахунок
