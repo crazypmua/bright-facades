@@ -36,6 +36,8 @@
 
   --font-display: "Manrope", "Inter", system-ui, sans-serif;
   --font-sans: "Manrope", "Inter", system-ui, sans-serif;
+  --font-brand: "Playfair Display", "Georgia", serif;
+  --color-azure: var(--azure);
 
   --shadow-elegant: 0 20px 60px -20px color-mix(in oklab, var(--primary) 25%, transparent);
   --shadow-soft: 0 4px 24px -6px oklch(0 0 0 / 0.08);
@@ -53,10 +55,11 @@
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.15 0.01 60);
 
-  /* Bright orange brand */
-  --primary: oklch(0.7 0.2 45);
+  /* Ekipazh-style bright orange */
+  --primary: oklch(0.685 0.22 42);
   --primary-foreground: oklch(1 0 0);
-  --primary-glow: oklch(0.78 0.18 60);
+  --primary-glow: oklch(0.76 0.2 55);
+  --azure: oklch(0.65 0.16 235);
 
   --secondary: oklch(0.97 0.005 60);
   --secondary-foreground: oklch(0.15 0.01 60);
@@ -114,6 +117,9 @@
 }
 
 @layer utilities {
+  .font-brand { font-family: var(--font-brand); }
+  .text-azure { color: var(--azure); }
+  .bg-azure { background-color: var(--azure); }
   .bg-gradient-primary { background: var(--gradient-primary); }
   .bg-gradient-hero { background: var(--gradient-hero); }
   .bg-gradient-fade { background: var(--gradient-fade); }
@@ -150,4 +156,12 @@
   font-weight: 200 800;
   font-display: swap;
   src: url("https://fonts.gstatic.com/s/manrope/v15/xn7gYHE41ni1AdIRggexSg.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url("https://fonts.gstatic.com/s/playfairdisplay/v37/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtM.woff2") format("woff2");
 }
