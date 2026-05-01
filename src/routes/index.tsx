@@ -16,14 +16,14 @@ import { useReveal } from "@/hooks/use-reveal";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "VITRO — Сучасні віконні та фасадні рішення | ПВХ, алюміній, двері" },
+      { title: "Elite Space — Металопластикові вікна за 4 дні | EKIPAZH, WDS, VEKA" },
       {
         name: "description",
         content:
-          "Преміум вікна, двері та фасадні системи в Україні. ПВХ та алюмінієві системи, розсувні конструкції. Виробництво, монтаж, гарантія 10 років.",
+          "Elite Space — партнер EKIPAZH, найбільшого виробника вікон в Україні. Металопластикові та алюмінієві вікна, двері, фасади. Виготовлення за 4 робочих дні.",
       },
-      { property: "og:title", content: "VITRO — Сучасні віконні та фасадні рішення" },
-      { property: "og:description", content: "ПВХ, алюмінієві системи, двері, фасади під ключ." },
+      { property: "og:title", content: "Elite Space — Наповнений природним світлом" },
+      { property: "og:description", content: "Металопластикові вікна EKIPAZH, WDS, VEKA. Виготовлення за 4 робочих дні." },
     ],
   }),
   component: Index,
