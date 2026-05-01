@@ -1,6 +1,6 @@
-import { Phone, Send, MessageCircle, Menu, X } from "lucide-react";
+import { Phone, Send, MessageCircle, Menu, X, Clock, Award } from "lucide-react";
 import { useState, useEffect } from "react";
-import logo from "@/assets/logo-elite-space.webp";
+import logoMark from "@/assets/logo-elite-mark.png";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -14,7 +14,7 @@ export function Header() {
   }, []);
 
   const nav = [
-    { label: "ПВХ", href: "#pvc" },
+    { label: "Металопластикові", href: "#pvc" },
     { label: "Алюміній", href: "#aluminum" },
     { label: "Фасади", href: "#facade" },
     { label: "Калькулятор", href: "#calculator" },
@@ -28,21 +28,50 @@ export function Header() {
         scrolled ? "bg-background/95 backdrop-blur-lg shadow-soft" : "bg-background"
       }`}
     >
+      {/* Top accent bar — Ekipazh-style */}
+      <div className="bg-foreground text-background text-[12px] sm:text-xs">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-9 flex items-center justify-between gap-4">
+          <div className="flex items-center gap-4 sm:gap-6 overflow-hidden">
+            <span className="inline-flex items-center gap-1.5">
+              <Clock className="h-3.5 w-3.5 text-primary" />
+              <span className="font-semibold text-primary">Виготовлення за 4 робочих дні</span>
+            </span>
+            <span className="hidden md:inline-flex items-center gap-1.5">
+              <Award className="h-3.5 w-3.5 text-primary" />
+              Найбільший виробник вікон в Україні
+            </span>
+          </div>
+          <div className="hidden sm:flex items-center gap-3 shrink-0">
+            <a href="tel:+380982018981" className="hover:text-primary transition-colors">+380 98 201 89 81</a>
+            <span className="opacity-30">·</span>
+            <a href="tel:+380971753288" className="hover:text-primary transition-colors">+380 97 175 32 88</a>
+          </div>
+        </div>
+      </div>
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 lg:h-20 items-center justify-between gap-4">
+        <div className="flex h-20 lg:h-24 items-center justify-between gap-4">
           {/* Logo */}
           <a href="#top" className="flex items-center gap-3 shrink-0">
             <img
-              src={logo}
-              alt="ELITE SPACE"
-              width={160}
-              height={48}
-              className="h-9 lg:h-10 w-auto"
+              src={logoMark}
+              alt="Elite Space"
+              width={56}
+              height={56}
+              className="h-12 w-12 lg:h-14 lg:w-14"
             />
+            <div className="flex flex-col leading-none">
+              <span className="font-brand text-2xl lg:text-3xl font-bold tracking-tight text-azure">
+                Elite Space
+              </span>
+              <span className="hidden sm:block text-[10.5px] lg:text-[11.5px] uppercase tracking-[0.18em] text-muted-foreground mt-1">
+                Наповнений природним світлом
+              </span>
+            </div>
           </a>
 
           {/* Nav */}
-          <nav className="hidden lg:flex items-center gap-7">
+          <nav className="hidden lg:flex items-center gap-6">
             {nav.map((n) => (
               <a
                 key={n.href}
@@ -57,26 +86,27 @@ export function Header() {
           {/* Contacts */}
           <div className="hidden md:flex items-center gap-2">
             <a
-              href="https://t.me/vitro"
+              href="https://t.me/EliteWindowsEkipazh"
               aria-label="Telegram"
               className="flex h-10 w-10 items-center justify-center rounded-full border border-border hover:border-primary hover:text-primary transition-colors"
             >
               <Send className="h-4 w-4" />
             </a>
             <a
-              href="https://wa.me/380000000000"
+              href="https://wa.me/380982018981"
               aria-label="WhatsApp"
               className="flex h-10 w-10 items-center justify-center rounded-full border border-border hover:border-primary hover:text-primary transition-colors"
             >
               <MessageCircle className="h-4 w-4" />
             </a>
             <a
-              href="tel:+380441234567"
-              className="flex items-center gap-2 px-4 h-10 rounded-full bg-foreground text-background text-sm font-semibold hover:bg-primary transition-colors"
+              href="tel:+380982018981"
+              className="relative flex items-center gap-2 px-5 h-11 rounded-full bg-gradient-primary text-primary-foreground text-sm font-bold shadow-elegant hover:scale-[1.03] transition-transform"
             >
-              <Phone className="h-4 w-4" />
-              <span className="hidden xl:inline">+380 44 123 45 67</span>
-              <span className="xl:hidden">Дзвонити</span>
+              <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-20" />
+              <Phone className="h-4 w-4 relative" />
+              <span className="hidden xl:inline relative">+380 98 201 89 81</span>
+              <span className="xl:hidden relative">Подзвонити</span>
             </a>
           </div>
 
@@ -102,8 +132,8 @@ export function Header() {
               </a>
             ))}
             <div className="flex items-center gap-2 pt-2">
-              <a href="tel:+380441234567" className="flex-1 inline-flex items-center justify-center gap-2 h-11 rounded-full bg-foreground text-background text-sm font-semibold">
-                <Phone className="h-4 w-4" /> +380 44 123 45 67
+              <a href="tel:+380982018981" className="flex-1 inline-flex items-center justify-center gap-2 h-12 rounded-full bg-gradient-primary text-primary-foreground text-sm font-bold shadow-elegant">
+                <Phone className="h-4 w-4" /> +380 98 201 89 81
               </a>
             </div>
           </div>
