@@ -4,18 +4,21 @@ import bannerImg from "@/assets/banner-categories.jpg";
 const cats = [
   {
     id: "pvc",
-    title: "ПВХ системи",
-    items: ["Вікна", "Двері", "Розсувні системи"],
+    title: "Металопластикові вікна",
+    items: ["EKIPAZH (Україна)", "WDS (Україна)", "VEKA (Німеччина)"],
+    featured: true,
   },
   {
     id: "aluminum",
     title: "Алюмінієві системи",
-    items: ["Вікна", "Двері", "Розсувні системи"],
+    items: ["Ekipazh AluLight (Україна)", "ALUMIL (Греція)", "Розсувні системи"],
+    featured: false,
   },
   {
     id: "facade",
     title: "Фасадні системи",
     items: ["Структурне скління", "Стоєчно-ригельні", "Вентильовані фасади"],
+    featured: false,
   },
 ];
 
@@ -49,18 +52,29 @@ export function Categories() {
             <a
               key={c.id}
               href={`#${c.id}`}
-              className="group relative overflow-hidden rounded-3xl border border-border bg-card p-7 lg:p-8 shadow-card hover:shadow-elegant hover:-translate-y-1 transition-all duration-300"
+              className={`group relative overflow-hidden rounded-3xl p-7 lg:p-8 transition-all duration-300 hover:-translate-y-1 ${
+                c.featured
+                  ? "border-2 border-primary bg-gradient-to-br from-primary/10 via-card to-card shadow-elegant"
+                  : "border border-border bg-card shadow-card hover:shadow-elegant"
+              }`}
             >
-              <div className="absolute -top-20 -right-20 h-48 w-48 rounded-full bg-gradient-primary opacity-0 group-hover:opacity-10 blur-2xl transition-opacity" />
+              {c.featured && (
+                <div className="absolute top-4 right-4 inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-wider">
+                  Хіт продажів
+                </div>
+              )}
+              <div className="absolute -top-20 -right-20 h-48 w-48 rounded-full bg-gradient-primary opacity-0 group-hover:opacity-15 blur-2xl transition-opacity" />
               <div className="relative">
                 <div className="flex items-start justify-between gap-4 mb-4">
-                  <h3 className="font-display font-extrabold text-2xl lg:text-3xl">{c.title}</h3>
+                  <h3 className={`font-display font-extrabold text-2xl lg:text-3xl ${c.featured ? "text-primary" : ""}`}>
+                    {c.title}
+                  </h3>
                   <ArrowUpRight className="h-6 w-6 shrink-0 text-muted-foreground group-hover:text-primary group-hover:rotate-45 transition-all" />
                 </div>
                 <ul className="space-y-2">
                   {c.items.map((it) => (
-                    <li key={it} className="flex items-center gap-2 text-muted-foreground">
-                      <span className="h-1 w-1 rounded-full bg-primary" />
+                    <li key={it} className="flex items-center gap-2 text-foreground/80">
+                      <span className="h-1.5 w-1.5 rounded-full bg-primary" />
                       {it}
                     </li>
                   ))}
