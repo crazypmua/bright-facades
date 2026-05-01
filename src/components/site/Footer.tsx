@@ -10,7 +10,7 @@ export function Footer() {
               <div className="bg-background rounded-full p-1.5">
                 <img src={logoMark} alt="Elite Space" width={40} height={40} className="h-10 w-10" />
               </div>
-              <span className="font-brand text-2xl font-bold text-azure">Elite Space</span>
+              <span className="font-brand text-2xl font-bold text-foreground">Elite Space</span>
             </div>
             <p className="text-sm italic mb-2">«Елітний Простір — Наповнений Природним Світлом»</p>
             <p className="text-xs text-background/50">Партнер EKIPAZH — найбільшого виробника вікон в Україні.</p>

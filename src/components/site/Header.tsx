@@ -61,7 +61,7 @@ export function Header() {
               className="h-12 w-12 lg:h-14 lg:w-14"
             />
             <div className="flex flex-col leading-none">
-              <span className="font-brand text-2xl lg:text-3xl font-bold tracking-tight text-azure">
+              <span className="font-brand text-2xl lg:text-3xl font-bold tracking-tight text-foreground">
                 Elite Space
               </span>
               <span className="hidden sm:block text-[10.5px] lg:text-[11.5px] uppercase tracking-[0.18em] text-muted-foreground mt-1">
