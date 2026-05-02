@@ -1,6 +1,6 @@
 import { Phone, Send, MessageCircle, Menu, X, Clock, Award } from "lucide-react";
 import { useState, useEffect } from "react";
-import logoOriginal from "@/assets/logo-elite-space-original.png";
+import logoOriginal from "@/assets/logo-elite-space-round.png";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -56,9 +56,9 @@ export function Header() {
             <img
               src={logoOriginal}
               alt="Elite Space"
-              width={190}
+              width={64}
               height={64}
-              className="h-11 sm:h-12 lg:h-14 w-auto"
+              className="h-12 sm:h-14 lg:h-16 w-auto rounded-full"
             />
             <div className="flex flex-col leading-tight">
               <span className="font-brand text-azure text-2xl sm:text-[26px] lg:text-3xl font-bold tracking-tight">

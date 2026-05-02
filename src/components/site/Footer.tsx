@@ -1,4 +1,4 @@
-import logoOriginal from "@/assets/logo-elite-space-original.png";
+import logoOriginal from "@/assets/logo-elite-space-round.png";
 
 export function Footer() {
   return (
@@ -7,9 +7,7 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-10">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="bg-background rounded-md px-2 py-1.5">
-                <img src={logoOriginal} alt="Elite Space" width={128} height={44} className="h-9 w-auto" />
-              </div>
+              <img src={logoOriginal} alt="Elite Space" width={56} height={56} className="h-14 w-14 rounded-full" />
               <span className="font-brand text-azure text-2xl font-bold tracking-tight">Elite Space</span>
             </div>
             <p className="text-sm italic mb-2">«Елітний Простір — Наповнений Природним Світлом»</p>
