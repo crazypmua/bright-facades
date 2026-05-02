@@ -1,7 +1,7 @@
 import { Phone, Send, MessageCircle, Menu, X, Clock, Award } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "@tanstack/react-router";
-import logoOriginal from "@/assets/logo-elite-space-round.png";
+import logoOriginal from "@/assets/logo-elite-space-pill.png";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -53,22 +53,15 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 lg:h-24 items-center justify-between gap-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 shrink-0">
+          <Link to="/" className="flex items-center shrink-0">
             <img
               src={logoOriginal}
               alt="Elite Space"
-              width={64}
-              height={64}
-              className="h-12 sm:h-14 lg:h-16 w-auto rounded-full"
+              width={260}
+              height={80}
+              className="h-12 sm:h-14 lg:h-16 w-auto"
             />
-            <div className="flex flex-col leading-tight">
-              <span className="font-brand text-azure text-2xl sm:text-[26px] lg:text-3xl font-bold tracking-tight">
-                Elite Space
-              </span>
-              <span className="hidden sm:block text-[10.5px] lg:text-[11.5px] uppercase tracking-[0.18em] text-muted-foreground mt-0.5">
-                Наповнений природним світлом
-              </span>
-            </div>
+            <span className="sr-only">Elite Space — Наповнений природним світлом</span>
           </Link>
 
           {/* Nav */}
