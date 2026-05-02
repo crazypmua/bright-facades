@@ -1,4 +1,4 @@
-import logoOriginal from "@/assets/logo-elite-space-pill.png";
+import logoOriginal from "@/assets/logo-elite-space-circle.png";
 
 export function Footer() {
   return (
@@ -6,8 +6,8 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-10">
           <div>
-            <div className="bg-background rounded-xl px-3 py-2 inline-block mb-4">
-              <img src={logoOriginal} alt="Elite Space" width={200} height={60} className="h-10 w-auto" />
+            <div className="bg-background rounded-2xl px-3 py-2 inline-block mb-4">
+              <img src={logoOriginal} alt="Elite Space" width={220} height={110} className="h-14 w-auto" />
             </div>
             <p className="text-sm italic mb-2">«Елітний Простір — Наповнений Природним Світлом»</p>
             <p className="text-xs text-background/50">Партнер EKIPAZH — найбільшого виробника вікон в Україні.</p>

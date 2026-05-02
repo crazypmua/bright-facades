@@ -1,7 +1,7 @@
 import { Phone, Send, MessageCircle, Menu, X, Clock, Award } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "@tanstack/react-router";
-import logoOriginal from "@/assets/logo-elite-space-pill.png";
+import logoOriginal from "@/assets/logo-elite-space-circle.png";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -57,9 +57,9 @@ export function Header() {
             <img
               src={logoOriginal}
               alt="Elite Space"
-              width={260}
-              height={80}
-              className="h-12 sm:h-14 lg:h-16 w-auto"
+              width={280}
+              height={140}
+              className="h-14 sm:h-16 lg:h-20 w-auto"
             />
             <span className="sr-only">Elite Space — Наповнений природним світлом</span>
           </Link>
