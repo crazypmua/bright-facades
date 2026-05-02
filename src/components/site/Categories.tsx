@@ -1,24 +1,38 @@
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import bannerImg from "@/assets/banner-categories.jpg";
 
-const cats = [
+const cats: {
+  id: string;
+  to: "/pvc" | "/doors" | "/aluminum" | "/facades";
+  title: string;
+  items: string[];
+  featured?: boolean;
+}[] = [
   {
     id: "pvc",
+    to: "/pvc",
     title: "Металопластикові вікна",
     items: ["EKIPAZH (Україна)", "WDS (Україна)", "VEKA (Німеччина)"],
     featured: true,
   },
   {
+    id: "doors",
+    to: "/doors",
+    title: "Двері",
+    items: ["Вхідні групи", "HS-портали розсувні", "Штульпові балконні"],
+  },
+  {
     id: "aluminum",
+    to: "/aluminum",
     title: "Алюмінієві системи",
     items: ["Ekipazh AluLight (Україна)", "ALUMIL (Греція)", "Розсувні системи"],
-    featured: false,
   },
   {
     id: "facade",
+    to: "/facades",
     title: "Фасадні системи",
     items: ["Структурне скління", "Стоєчно-ригельні", "Вентильовані фасади"],
-    featured: false,
   },
 ];
 
@@ -47,11 +61,11 @@ export function Categories() {
           <div className="absolute inset-0 bg-gradient-to-r from-background/40 via-transparent to-transparent" />
         </div>
 
-        <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
           {cats.map((c) => (
-            <a
+            <Link
               key={c.id}
-              href={`#${c.id}`}
+              to={c.to}
               className={`group relative overflow-hidden rounded-3xl p-7 lg:p-8 transition-all duration-300 hover:-translate-y-1 ${
                 c.featured
                   ? "border-2 border-primary bg-gradient-to-br from-primary/10 via-card to-card shadow-elegant"
@@ -66,21 +80,24 @@ export function Categories() {
               <div className="absolute -top-20 -right-20 h-48 w-48 rounded-full bg-gradient-primary opacity-0 group-hover:opacity-15 blur-2xl transition-opacity" />
               <div className="relative">
                 <div className="flex items-start justify-between gap-4 mb-4">
-                  <h3 className={`font-display font-extrabold text-2xl lg:text-3xl ${c.featured ? "text-primary" : ""}`}>
+                  <h3 className={`font-display font-extrabold text-xl lg:text-2xl ${c.featured ? "text-primary" : ""}`}>
                     {c.title}
                   </h3>
                   <ArrowUpRight className="h-6 w-6 shrink-0 text-muted-foreground group-hover:text-primary group-hover:rotate-45 transition-all" />
                 </div>
-                <ul className="space-y-2">
+                <ul className="space-y-2 mb-5">
                   {c.items.map((it) => (
-                    <li key={it} className="flex items-center gap-2 text-foreground/80">
+                    <li key={it} className="flex items-center gap-2 text-sm text-foreground/80">
                       <span className="h-1.5 w-1.5 rounded-full bg-primary" />
                       {it}
                     </li>
                   ))}
                 </ul>
+                <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary">
+                  Перейти до каталогу →
+                </span>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>

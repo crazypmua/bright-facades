@@ -1,5 +1,6 @@
 import { Phone, Send, MessageCircle, Menu, X, Clock, Award } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Link } from "@tanstack/react-router";
 import logoOriginal from "@/assets/logo-elite-space-round.png";
 
 export function Header() {
@@ -13,13 +14,13 @@ export function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const nav = [
-    { label: "Металопластикові", href: "#pvc" },
-    { label: "Алюміній", href: "#aluminum" },
-    { label: "Фасади", href: "#facade" },
-    { label: "Калькулятор", href: "#calculator" },
-    { label: "Відгуки", href: "#reviews" },
-    { label: "Контакти", href: "#contact" },
+  const nav: { label: string; to?: string; href?: string }[] = [
+    { label: "Металопластикові", to: "/pvc" },
+    { label: "Двері", to: "/doors" },
+    { label: "Алюміній", to: "/aluminum" },
+    { label: "Фасади", to: "/facades" },
+    { label: "Калькулятор", href: "/#calculator" },
+    { label: "Контакти", href: "/#contact" },
   ];
 
   return (
@@ -52,7 +53,7 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 lg:h-24 items-center justify-between gap-4">
           {/* Logo */}
-          <a href="#top" className="flex items-center gap-3 shrink-0">
+          <Link to="/" className="flex items-center gap-3 shrink-0">
             <img
               src={logoOriginal}
               alt="Elite Space"
@@ -68,19 +69,30 @@ export function Header() {
                 Наповнений природним світлом
               </span>
             </div>
-          </a>
+          </Link>
 
           {/* Nav */}
           <nav className="hidden lg:flex items-center gap-6">
-            {nav.map((n) => (
-              <a
-                key={n.href}
-                href={n.href}
-                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
-              >
-                {n.label}
-              </a>
-            ))}
+            {nav.map((n) =>
+              n.to ? (
+                <Link
+                  key={n.label}
+                  to={n.to}
+                  activeProps={{ className: "text-primary" }}
+                  className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+                >
+                  {n.label}
+                </Link>
+              ) : (
+                <a
+                  key={n.label}
+                  href={n.href}
+                  className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
+                >
+                  {n.label}
+                </a>
+              )
+            )}
           </nav>
 
           {/* Contacts */}
@@ -121,16 +133,27 @@ export function Header() {
 
         {open && (
           <div className="lg:hidden pb-4 border-t border-border pt-4 space-y-3">
-            {nav.map((n) => (
-              <a
-                key={n.href}
-                href={n.href}
-                onClick={() => setOpen(false)}
-                className="block text-base font-medium py-1"
-              >
-                {n.label}
-              </a>
-            ))}
+            {nav.map((n) =>
+              n.to ? (
+                <Link
+                  key={n.label}
+                  to={n.to}
+                  onClick={() => setOpen(false)}
+                  className="block text-base font-medium py-1"
+                >
+                  {n.label}
+                </Link>
+              ) : (
+                <a
+                  key={n.label}
+                  href={n.href}
+                  onClick={() => setOpen(false)}
+                  className="block text-base font-medium py-1"
+                >
+                  {n.label}
+                </a>
+              )
+            )}
             <div className="flex items-center gap-2 pt-2">
               <a href="tel:+380982018981" className="flex-1 inline-flex items-center justify-center gap-2 h-12 rounded-full bg-gradient-primary text-primary-foreground text-sm font-bold shadow-elegant">
                 <Phone className="h-4 w-4" /> +380 98 201 89 81
