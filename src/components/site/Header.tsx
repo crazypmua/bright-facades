@@ -1,6 +1,6 @@
 import { Phone, Send, MessageCircle, Menu, X, Clock, Award } from "lucide-react";
 import { useState, useEffect } from "react";
-import logoMark from "@/assets/logo-elite-mark.png";
+import logoOriginal from "@/assets/logo-elite-space-original.png";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -54,17 +54,14 @@ export function Header() {
           {/* Logo */}
           <a href="#top" className="flex items-center gap-3 shrink-0">
             <img
-              src={logoMark}
+              src={logoOriginal}
               alt="Elite Space"
-              width={56}
-              height={56}
-              className="h-12 w-12 lg:h-14 lg:w-14"
+              width={190}
+              height={64}
+              className="h-11 sm:h-12 lg:h-14 w-auto"
             />
             <div className="flex flex-col leading-none">
-              <span className="font-brand text-2xl lg:text-3xl font-bold tracking-tight text-foreground">
-                Elite Space
-              </span>
-              <span className="hidden sm:block text-[10.5px] lg:text-[11.5px] uppercase tracking-[0.18em] text-muted-foreground mt-1">
+              <span className="hidden sm:block text-[10.5px] lg:text-[11.5px] uppercase tracking-[0.18em] text-muted-foreground">
                 Наповнений природним світлом
               </span>
             </div>
