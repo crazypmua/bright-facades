@@ -229,8 +229,7 @@ export function FloatingCall() {
         aria-label={open ? "Закрити чат" : "Відкрити чат"}
         className="fixed bottom-6 right-4 sm:right-6 z-50 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-primary text-primary-foreground shadow-elegant hover:scale-105 transition-transform"
       >
-        {!open && <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-30" />}
-        {open ? <X className="h-7 w-7 relative" /> : <MessageCircle className="h-7 w-7 relative" />}
+        {open ? <X className="h-7 w-7" /> : <MessageCircle className="h-7 w-7" />}
         {!open && (
           <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-red-500 text-white text-[11px] font-bold flex items-center justify-center border-2 border-background">
             1
