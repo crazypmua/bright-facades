@@ -9,8 +9,32 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as PvcRouteImport } from './routes/pvc'
+import { Route as FacadesRouteImport } from './routes/facades'
+import { Route as DoorsRouteImport } from './routes/doors'
+import { Route as AluminumRouteImport } from './routes/aluminum'
 import { Route as IndexRouteImport } from './routes/index'
 
+const PvcRoute = PvcRouteImport.update({
+  id: '/pvc',
+  path: '/pvc',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FacadesRoute = FacadesRouteImport.update({
+  id: '/facades',
+  path: '/facades',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DoorsRoute = DoorsRouteImport.update({
+  id: '/doors',
+  path: '/doors',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AluminumRoute = AluminumRouteImport.update({
+  id: '/aluminum',
+  path: '/aluminum',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +43,72 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/aluminum': typeof AluminumRoute
+  '/doors': typeof DoorsRoute
+  '/facades': typeof FacadesRoute
+  '/pvc': typeof PvcRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/aluminum': typeof AluminumRoute
+  '/doors': typeof DoorsRoute
+  '/facades': typeof FacadesRoute
+  '/pvc': typeof PvcRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/aluminum': typeof AluminumRoute
+  '/doors': typeof DoorsRoute
+  '/facades': typeof FacadesRoute
+  '/pvc': typeof PvcRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/aluminum' | '/doors' | '/facades' | '/pvc'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/aluminum' | '/doors' | '/facades' | '/pvc'
+  id: '__root__' | '/' | '/aluminum' | '/doors' | '/facades' | '/pvc'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AluminumRoute: typeof AluminumRoute
+  DoorsRoute: typeof DoorsRoute
+  FacadesRoute: typeof FacadesRoute
+  PvcRoute: typeof PvcRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/pvc': {
+      id: '/pvc'
+      path: '/pvc'
+      fullPath: '/pvc'
+      preLoaderRoute: typeof PvcRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/facades': {
+      id: '/facades'
+      path: '/facades'
+      fullPath: '/facades'
+      preLoaderRoute: typeof FacadesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/doors': {
+      id: '/doors'
+      path: '/doors'
+      fullPath: '/doors'
+      preLoaderRoute: typeof DoorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aluminum': {
+      id: '/aluminum'
+      path: '/aluminum'
+      fullPath: '/aluminum'
+      preLoaderRoute: typeof AluminumRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,7 +121,20 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AluminumRoute: AluminumRoute,
+  DoorsRoute: DoorsRoute,
+  FacadesRoute: FacadesRoute,
+  PvcRoute: PvcRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { createStart } from '@tanstack/react-start'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+  }
+}
