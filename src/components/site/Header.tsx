@@ -60,8 +60,11 @@ export function Header() {
               height={64}
               className="h-11 sm:h-12 lg:h-14 w-auto"
             />
-            <div className="flex flex-col leading-none">
-              <span className="hidden sm:block text-[10.5px] lg:text-[11.5px] uppercase tracking-[0.18em] text-muted-foreground">
+            <div className="flex flex-col leading-tight">
+              <span className="font-brand text-azure text-2xl sm:text-[26px] lg:text-3xl font-bold tracking-tight">
+                Elite Space
+              </span>
+              <span className="hidden sm:block text-[10.5px] lg:text-[11.5px] uppercase tracking-[0.18em] text-muted-foreground mt-0.5">
                 Наповнений природним світлом
               </span>
             </div>
