@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { z } from "zod";
-import { Phone, Send, MessageCircle, Mail, MapPin, CheckCircle2 } from "lucide-react";
+import { Phone, Send, MessageCircle, CheckCircle2 } from "lucide-react";
 import { toast } from "sonner";
 
 const schema = z.object({
@@ -49,8 +49,6 @@ export function Contact() {
               <Info icon={Phone} title="+380 97 175 32 88" sub="Менеджер відділу продажів" href="tel:+380971753288" />
               <Info icon={Send} title="Telegram-канал" sub="@EliteWindowsEkipazh" href="https://t.me/EliteWindowsEkipazh" />
               <Info icon={MessageCircle} title="Instagram" sub="@elitespace_ekipazh" href="https://www.instagram.com/elitespace_ekipazh" />
-              <Info icon={Mail} title="elitespacegroup.com" sub="Офіційний сайт" href="https://elitespacegroup.com/" />
-              <Info icon={MapPin} title="Київ та по всій Україні" sub="Виїзд майстра — безкоштовно" />
             </div>
           </div>
 
