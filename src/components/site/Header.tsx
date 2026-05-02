@@ -106,12 +106,11 @@ export function Header() {
             </a>
             <a
               href="tel:+380982018981"
-              className="relative flex items-center gap-2 px-5 h-11 rounded-full bg-gradient-primary text-primary-foreground text-sm font-bold shadow-elegant hover:scale-[1.03] transition-transform"
+              className="flex items-center gap-2 px-5 h-11 rounded-full bg-gradient-primary text-primary-foreground text-sm font-bold shadow-elegant hover:scale-[1.03] transition-transform"
             >
-              <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-20" />
-              <Phone className="h-4 w-4 relative" />
-              <span className="hidden xl:inline relative">+380 98 201 89 81</span>
-              <span className="xl:hidden relative">Подзвонити</span>
+              <Phone className="h-4 w-4" />
+              <span className="hidden xl:inline">+380 98 201 89 81</span>
+              <span className="xl:hidden">Подзвонити</span>
             </a>
           </div>
 
