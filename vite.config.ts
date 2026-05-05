@@ -7,8 +7,6 @@
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
-  // Cloudflare worker output breaks SPA prerender (expects Node server bundle).
-  cloudflare: false,
   tanstackStart: {
     spa: {
       enabled: true,
