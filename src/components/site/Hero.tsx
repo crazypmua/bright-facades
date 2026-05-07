@@ -96,26 +96,38 @@ export function Hero() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 lg:pt-20 pb-20 lg:pb-32">
-        <div className="max-w-2xl">
+        <div className="max-w-3xl">
           <div className="reveal inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-wider mb-5">
-            <span className="h-2 w-2 rounded-full bg-primary animate-pulse" />
-            Виготовлення за 4 робочих дні
+            <span className="h-2 w-2 rounded-full bg-primary" />
+            Найбільший виробник вікон в Україні
           </div>
-          <h1 className="reveal text-balance font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.05] tracking-tight">
-            <span className="text-primary">Металопластикові</span> вікна та <span className="text-primary">фасадні</span> рішення
+          <h1 className="reveal text-balance font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-[1.02] tracking-tight">
+            <span className="text-azure">ELITE</span> <span className="text-primary">SPACE</span>
           </h1>
-          <p className="reveal reveal-delay-1 mt-6 text-lg lg:text-xl text-muted-foreground max-w-xl text-balance">
-            EKIPAZH, WDS, VEKA, ALUMIL — оригінальні профілі. Власне виробництво, монтаж і сервіс під ключ по всій Україні.
+          <p className="reveal reveal-delay-1 mt-5 font-display text-xl lg:text-2xl font-bold uppercase tracking-wide text-foreground/90">
+            Найбільший виробник вікон в Україні
           </p>
+          <ul className="reveal reveal-delay-1 mt-5 grid sm:grid-cols-2 gap-x-6 gap-y-2 text-base lg:text-lg text-foreground/80 max-w-xl">
+            {[
+              "Металопластикові системи",
+              "Алюмінієві системи",
+              "Фасадні системи",
+              "Суцільноскляні конструкції",
+            ].map((t) => (
+              <li key={t} className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                {t}
+              </li>
+            ))}
+          </ul>
 
           <div className="reveal reveal-delay-2 mt-8 flex flex-col sm:flex-row gap-3">
             <a
               href="tel:+380982018981"
-              className="relative inline-flex items-center justify-center gap-2 h-16 px-8 rounded-full bg-gradient-primary text-primary-foreground font-bold text-lg shadow-elegant hover:scale-[1.03] transition-transform"
+              className="inline-flex items-center justify-center gap-2 h-16 px-8 rounded-full bg-gradient-primary text-primary-foreground font-bold text-lg shadow-elegant hover:scale-[1.03] transition-transform"
             >
-              <span className="absolute inset-0 rounded-full bg-primary animate-ping opacity-25" />
-              <Phone className="h-5 w-5 relative" />
-              <span className="relative">Подзвонити зараз</span>
+              <Phone className="h-5 w-5" />
+              Подзвонити зараз
             </a>
             <a
               href="#calculator"
@@ -126,15 +138,16 @@ export function Hero() {
             </a>
           </div>
 
-          <div className="reveal reveal-delay-3 mt-10 grid grid-cols-3 gap-6 max-w-lg">
+          <div className="reveal reveal-delay-3 mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl">
             {[
-              { icon: Award, k: "№1", v: "виробник в Україні" },
-              { icon: Clock, k: "4 дні", v: "виготовлення" },
-              { icon: Shield, k: "10 років", v: "гарантії" },
+              { icon: Clock, k: "4 дні", v: "металопластик" },
+              { icon: Clock, k: "від 20 днів", v: "алюміній" },
+              { icon: Shield, k: "до 15 років", v: "гарантії" },
+              { icon: Award, k: "до 4000", v: "конструкцій / день" },
             ].map((s) => (
               <div key={s.v}>
                 <s.icon className="h-5 w-5 text-primary mb-2" />
-                <div className="font-display font-extrabold text-2xl">{s.k}</div>
+                <div className="font-display font-extrabold text-xl lg:text-2xl">{s.k}</div>
                 <div className="text-xs text-muted-foreground mt-0.5">{s.v}</div>
               </div>
             ))}
