@@ -10,7 +10,7 @@ export function Footer() {
               <img src={logoOriginal} alt="Elite Space" width={220} height={110} className="h-14 w-auto" />
             </div>
             <p className="text-sm italic mb-2">«Елітний Простір — Наповнений Природним Світлом»</p>
-            <p className="text-xs text-background/50">Партнер EKIPAZH — найбільшого виробника вікон в Україні.</p>
+            <p className="text-xs text-background/50">Найбільший виробник світлопрозорих конструкцій в Україні.</p>
           </div>
           <FooterCol
             title="Продукція"
@@ -23,8 +23,8 @@ export function Footer() {
           <div>
             <h4 className="font-display font-bold text-background mb-4">Контакти</h4>
             <ul className="space-y-2 text-sm">
+              <li><a href="tel:+380971753288" className="hover:text-primary transition-colors">Євгенія: +380 97 175 32 88</a></li>
               <li><a href="tel:+380982018981" className="hover:text-primary transition-colors">+380 98 201 89 81</a></li>
-              <li><a href="tel:+380971753288" className="hover:text-primary transition-colors">+380 97 175 32 88</a></li>
               <li><a href="https://elitespacegroup.com/" className="hover:text-primary transition-colors">elitespacegroup.com</a></li>
               <li><a href="https://t.me/EliteWindowsEkipazh" className="hover:text-primary transition-colors">Telegram-канал</a></li>
               <li><a href="https://www.instagram.com/elitespace_ekipazh" className="hover:text-primary transition-colors">Instagram</a></li>
