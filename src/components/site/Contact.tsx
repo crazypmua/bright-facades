@@ -73,7 +73,7 @@ export function Contact() {
                   className="w-full inline-flex items-center justify-center gap-2 h-14 rounded-full bg-gradient-primary text-primary-foreground font-semibold text-base shadow-elegant hover:opacity-95 transition"
                 >
                   {sent ? <CheckCircle2 className="h-5 w-5" /> : <Phone className="h-5 w-5" />}
-                  {sent ? "Заявка надіслана" : "Замовити дзвінок"}
+                  {sent ? "Заявка надіслана" : "ЗАМОВИТИ"}
                 </button>
                 <p className="text-xs text-muted-foreground text-center">
                   Натискаючи кнопку, ви погоджуєтесь з обробкою персональних даних.
