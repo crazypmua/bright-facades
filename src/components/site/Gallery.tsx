@@ -17,10 +17,10 @@ const sections: Section[] = [
   {
     id: "pvc",
     eyebrow: "ПВХ",
-    title: "Вікна, що зігрівають дім",
+    title: "EKIPAZH · WDS · VEKA",
     desc: "Енергоощадні ПВХ-вікна з 5–7 камерним профілем та склопакетом до Ug 0,5. Тиша, тепло, естетика.",
     image: pvcImg,
-    features: ["Профіль REHAU / Veka / WDS", "Склопакет 2-камерний", "Фурнітура Roto / Maco", "Гарантія 10 років"],
+    features: ["Профіль EKIPAZH / WDS / VEKA", "Склопакет 2-камерний", "Фурнітура Roto / Maco", "Гарантія 10 років"],
   },
   {
     id: "doors",

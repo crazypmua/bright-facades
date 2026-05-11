@@ -99,13 +99,13 @@ export function Hero() {
         <div className="max-w-3xl">
           <div className="reveal inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-primary text-xs font-bold uppercase tracking-wider mb-5">
             <span className="h-2 w-2 rounded-full bg-primary" />
-            Найбільший виробник вікон в Україні
+            Найбільший виробник світлопрозорих конструкцій в Україні
           </div>
           <h1 className="reveal text-balance font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-[1.02] tracking-tight">
             <span className="text-azure">ELITE</span> <span className="text-primary">SPACE</span>
           </h1>
           <p className="reveal reveal-delay-1 mt-5 font-display text-xl lg:text-2xl font-bold uppercase tracking-wide text-foreground/90">
-            Найбільший виробник вікон в Україні
+            Найбільший виробник світлопрозорих конструкцій в Україні
           </p>
           <ul className="reveal reveal-delay-1 mt-5 grid sm:grid-cols-2 gap-x-6 gap-y-2 text-base lg:text-lg text-foreground/80 max-w-xl">
             {[
@@ -123,7 +123,7 @@ export function Hero() {
 
           <div className="reveal reveal-delay-2 mt-8 flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:+380982018981"
+              href="tel:+380971753288"
               className="inline-flex items-center justify-center gap-2 h-16 px-8 rounded-full bg-gradient-primary text-primary-foreground font-bold text-lg shadow-elegant hover:scale-[1.03] transition-transform"
             >
               <Phone className="h-5 w-5" />

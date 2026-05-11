@@ -43,9 +43,9 @@ export function Header() {
             </span>
           </div>
           <div className="hidden sm:flex items-center gap-3 shrink-0">
-            <a href="tel:+380982018981" className="hover:text-primary transition-colors">+380 98 201 89 81</a>
+            <a href="tel:+380971753288" className="hover:text-primary transition-colors">Євгенія: +380 97 175 32 88</a>
             <span className="opacity-30">·</span>
-            <a href="tel:+380971753288" className="hover:text-primary transition-colors">+380 97 175 32 88</a>
+            <a href="tel:+380982018981" className="hover:text-primary transition-colors">+380 98 201 89 81</a>
           </div>
         </div>
       </div>
@@ -112,11 +112,11 @@ export function Header() {
               <MessageCircle className="h-4 w-4" />
             </a>
             <a
-              href="tel:+380982018981"
+              href="tel:+380971753288"
               className="inline-flex items-center gap-2 px-4 sm:px-5 h-11 lg:h-12 rounded-full bg-gradient-primary text-primary-foreground text-sm font-bold shadow-elegant hover:scale-[1.03] transition-transform"
             >
               <Phone className="h-4 w-4" />
-              <span className="hidden xl:inline">+380 98 201 89 81</span>
+              <span className="hidden xl:inline">+380 97 175 32 88</span>
               <span className="xl:hidden">Подзвонити</span>
             </a>
 
