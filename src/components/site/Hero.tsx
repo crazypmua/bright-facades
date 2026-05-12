@@ -102,7 +102,7 @@ export function Hero() {
             Найбільший виробник світлопрозорих конструкцій в Україні
           </div>
           <h1 className="reveal text-balance font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-[1.02] tracking-tight">
-            <span className="text-azure">ELITE</span> <span className="text-primary">SPACE</span>
+            <span className="text-foreground">ELITE</span> <span className="text-primary">SPACE</span>
           </h1>
           <p className="reveal reveal-delay-1 mt-5 font-display text-xl lg:text-2xl font-bold uppercase tracking-wide text-foreground/90">
             Найбільший виробник світлопрозорих конструкцій в Україні
