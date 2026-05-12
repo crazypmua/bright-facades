@@ -1,4 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import bannerImg from "@/assets/banner-categories.jpg";
 
@@ -73,17 +72,16 @@ export function Categories() {
               }`}
             >
               {c.featured && (
-                <div className="absolute top-4 right-4 inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-wider">
+                <div className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary text-primary-foreground text-[10px] font-bold uppercase tracking-wider mb-3">
                   Хіт продажів
                 </div>
               )}
               <div className="absolute -top-20 -right-20 h-48 w-48 rounded-full bg-gradient-primary opacity-0 group-hover:opacity-15 blur-2xl transition-opacity" />
               <div className="relative">
-                <div className="flex items-start justify-between gap-4 mb-4">
+                <div className="mb-4">
                   <h3 className={`font-display font-extrabold text-xl lg:text-2xl ${c.featured ? "text-primary" : ""}`}>
                     {c.title}
                   </h3>
-                  <ArrowUpRight className="h-6 w-6 shrink-0 text-muted-foreground group-hover:text-primary group-hover:rotate-45 transition-all" />
                 </div>
                 <ul className="space-y-2 mb-5">
                   {c.items.map((it) => (
