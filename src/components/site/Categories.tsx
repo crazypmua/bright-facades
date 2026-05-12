@@ -1,4 +1,3 @@
-import { ArrowUpRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import bannerImg from "@/assets/banner-categories.jpg";
 
