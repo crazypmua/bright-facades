@@ -123,11 +123,11 @@ export function Hero() {
 
           <div className="reveal reveal-delay-2 mt-8 flex flex-col sm:flex-row gap-3">
             <a
-              href="tel:+380971753288"
+              href="#contact"
               className="inline-flex items-center justify-center gap-2 h-16 px-8 rounded-full bg-gradient-primary text-primary-foreground font-bold text-lg shadow-elegant hover:scale-[1.03] transition-transform"
             >
               <Phone className="h-5 w-5" />
-              Подзвонити зараз
+              Залишити заявку
             </a>
             <a
               href="#calculator"
