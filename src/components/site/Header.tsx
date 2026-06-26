@@ -1,4 +1,4 @@
-import { Phone, Send, MessageCircle, Menu, X, Clock, Sparkles } from "lucide-react";
+import { Phone, Send, MessageCircle, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "@tanstack/react-router";
 import logoOriginal from "@/assets/logo-elite-space-circle.png";
@@ -29,27 +29,6 @@ export function Header() {
         scrolled ? "bg-background/95 backdrop-blur-lg shadow-soft" : "bg-background"
       }`}
     >
-      {/* Top accent bar */}
-      <div className="bg-foreground text-background text-[12px] sm:text-xs">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 min-h-9 py-1.5 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
-          <div className="flex items-center gap-4 sm:gap-6 overflow-hidden">
-            <span className="inline-flex items-center gap-1.5">
-              <Clock className="h-3.5 w-3.5 text-primary" />
-              <span className="font-semibold text-primary">Метал. за 4 дні · Алюміній від 20 днів</span>
-            </span>
-            <span className="hidden md:inline-flex items-center gap-1.5">
-              <Sparkles className="h-3.5 w-3.5 text-azure" />
-              Індивідуальний підхід — не шаблон
-            </span>
-          </div>
-          <div className="hidden sm:flex items-center gap-3 shrink-0">
-            <a href="tel:+380971753288" className="hover:text-primary transition-colors">Євгенія: +380 97 175 32 88</a>
-            <span className="opacity-30">·</span>
-            <a href="tel:+380982018981" className="hover:text-primary transition-colors">+380 98 201 89 81</a>
-          </div>
-        </div>
-      </div>
-
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 lg:h-24 items-center justify-between gap-4">
           {/* Logo + brand */}
