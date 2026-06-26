@@ -44,9 +44,6 @@ export function Header() {
               <span className="font-display font-extrabold text-azure text-2xl lg:text-3xl tracking-tight">
                 Elite Space
               </span>
-              <span className="text-[11px] lg:text-xs text-muted-foreground italic">
-                Елітний Простір — Наповнений Природним Світлом
-              </span>
             </div>
           </Link>
 
