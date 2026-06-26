@@ -9,7 +9,7 @@ export function Footer() {
             <div className="bg-background rounded-2xl px-3 py-2 inline-block mb-4">
               <img src={logoOriginal} alt="Elite Space" width={220} height={110} className="h-14 w-auto" />
             </div>
-            <p className="text-sm italic mb-2">«Елітний Простір — Наповнений Природним Світлом»</p>
+            
             <p className="text-xs text-background/50">Найбільший виробник світлопрозорих конструкцій в Україні.</p>
           </div>
           <FooterCol
