@@ -16,7 +16,7 @@ export function Header() {
 
   const nav: { label: string; to?: string; href?: string }[] = [
     { label: "Металопластикові конструкції", to: "/pvc" },
-    { label: "Алюміній", to: "/aluminum" },
+    { label: "Галерея", to: "/aluminum" },
     { label: "Фасади", to: "/facades" },
     { label: "Двері", to: "/doors" },
     { label: "Калькулятор", href: "/#calculator" },
