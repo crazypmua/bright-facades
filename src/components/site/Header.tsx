@@ -1,4 +1,4 @@
-import { Phone, Send, MessageCircle, Menu, X, Clock, Sparkles } from "lucide-react";
+import { Phone, Send, MessageCircle, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "@tanstack/react-router";
 import logoOriginal from "@/assets/logo-elite-space-circle.png";
