@@ -35,7 +35,7 @@ function DoorsPage() {
         },
         {
           name: "Алюмінієві вхідні групи",
-          origin: "ALUMIL / Ekipazh AluLight",
+          origin: "Prokural / Ekipazh AluLight",
           description: "Преміальні вхідні двері для офісів, ресторанів та приватних резиденцій.",
           features: ["Терморозрив", "Висота до 2,4 м", "Антивандальна фурнітура"],
           badge: "Преміум",
@@ -61,7 +61,7 @@ function DoorsPage() {
         },
         {
           name: "Сервісні двері",
-          origin: "ALUMIL · Греція",
+          origin: "Prokural · Польша",
           description: "Технічні алюмінієві двері для котелень, складів та технічних приміщень.",
           features: ["Без терморозриву", "Доводчик", "Антипаніка опція"],
         },

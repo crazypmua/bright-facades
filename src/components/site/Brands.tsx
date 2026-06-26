@@ -42,8 +42,8 @@ export function Brands() {
                 <span className="text-sm text-muted-foreground">Україна</span>
               </li>
               <li className="flex items-baseline justify-between">
-                <span className="font-display font-bold text-2xl">ALUMIL</span>
-                <span className="text-sm text-muted-foreground">Греція</span>
+                <span className="font-display font-bold text-2xl">Prokural</span>
+                <span className="text-sm text-muted-foreground">Польша</span>
               </li>
             </ul>
           </div>

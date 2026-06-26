@@ -19,7 +19,7 @@ const cats: {
     id: "aluminum",
     to: "/aluminum",
     title: "Алюмінієві системи",
-    items: ["Ekipazh AluLight (Україна)", "ALUMIL (Греція)", "Розсувні портали HS"],
+    items: ["Ekipazh AluLight (Україна)", "Prokural (Польша)", "Розсувні портали HS"],
   },
   {
     id: "facade",

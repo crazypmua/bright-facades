@@ -5,14 +5,14 @@ import heroImg from "@/assets/gallery-sliding.jpg";
 export const Route = createFileRoute("/aluminum")({
   head: () => ({
     meta: [
-      { title: "Алюмінієві системи — ALUMIL, AluLight | Elite Space" },
+      { title: "Алюмінієві системи — Prokural, AluLight | Elite Space" },
       {
         name: "description",
         content:
-          "Алюмінієві вікна, двері та розсувні системи. ALUMIL (Греція) та Ekipazh AluLight — преміум для архітектурних рішень.",
+          "Алюмінієві вікна, двері та розсувні системи. Prokural (Польша) та Ekipazh AluLight — преміум для архітектурних рішень.",
       },
       { property: "og:title", content: "Алюмінієві системи — Elite Space" },
-      { property: "og:description", content: "ALUMIL та Ekipazh AluLight — холодні та теплі системи." },
+      { property: "og:description", content: "Prokural та Ekipazh AluLight — холодні та теплі системи." },
     ],
   }),
   component: AluminumPage,
@@ -24,7 +24,7 @@ function AluminumPage() {
       eyebrow="Алюміній"
       title="Алюмінієві системи"
       subtitle="Великі скління, чисті лінії та архітектурна свобода"
-      intro="Холодні та теплі алюмінієві системи від ALUMIL (Греція) та Ekipazh AluLight — для приватних будинків, ресторанів, офісів та комерційних об'єктів."
+      intro="Холодні та теплі алюмінієві системи від Prokural (Польша) та Ekipazh AluLight — для приватних будинків, ресторанів, офісів та комерційних об'єктів."
       heroImage={heroImg}
       products={[
         {
@@ -34,34 +34,34 @@ function AluminumPage() {
           features: ["Без терморозриву", "Розсувні стулки", "Монтаж за 1 день"],
         },
         {
-          name: "ALUMIL S77",
-          origin: "ALUMIL · Греція",
+          name: "Prokural S77",
+          origin: "Prokural · Польша",
           description: "Тепла система з терморозривом для енергоефективних будинків.",
           features: ["Монтажна ширина 77 мм", "Ud до 1,0 Вт/м²К", "Скло до 56 мм"],
           badge: "Преміум",
         },
         {
-          name: "ALUMIL SMARTIA M630",
-          origin: "ALUMIL · Греція",
+          name: "Prokural SMARTIA M630",
+          origin: "Prokural · Польша",
           description: "Преміальна розсувна система для панорамних терас.",
           features: ["Скління до 6 м", "Підйомно-розсувна", "Низький поріг"],
           badge: "Хіт",
         },
         {
-          name: "ALUMIL SUPREME S650",
-          origin: "ALUMIL · Греція",
+          name: "Prokural SUPREME S650",
+          origin: "Prokural · Польша",
           description: "Топова система пасивного дому з мінімалістичним дизайном.",
           features: ["Монтажна ширина 76 мм", "3 ущільнювачі", "Прихована стулка"],
         },
         {
-          name: "Розсувний портал ALUMIL",
-          origin: "ALUMIL · Греція",
+          name: "Розсувний портал Prokural",
+          origin: "Prokural · Польша",
           description: "Безрамкові розсувні системи для максимальної панорами.",
           features: ["Скло до 48 мм", "Електропривід опція", "Антимоскітна сітка"],
         },
         {
           name: "Зимовий сад",
-          origin: "ALUMIL · Греція",
+          origin: "Prokural · Польша",
           description: "Комплексні рішення для прибудов та зимових садів під ключ.",
           features: ["Скляний дах", "Інтегрована вентиляція", "Сонцезахист"],
         },
@@ -69,7 +69,7 @@ function AluminumPage() {
       benefits={[
         { title: "Архітектурна свобода", text: "Габарити до 6 метрів і необмежені форми." },
         { title: "Терморозрив", text: "Енергоефективність на рівні преміальних ПВХ-систем." },
-        { title: "Сертифікати", text: "Офіційний партнер ALUMIL в Україні." },
+        { title: "Сертифікати", text: "Офіційний партнер Prokural в Україні." },
         { title: "Інженерний супровід", text: "Прорахунок навантажень та індивідуальний проект." },
       ]}
     />

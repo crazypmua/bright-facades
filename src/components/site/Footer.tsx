@@ -14,11 +14,11 @@ export function Footer() {
           </div>
           <FooterCol
             title="Продукція"
-            items={["Металопластикові вікна", "Алюмінієві системи", "Двері", "Фасади"]}
+            items={["Металопластикові конструкції", "Алюмінієві системи", "Двері", "Фасади"]}
           />
           <FooterCol
             title="Бренди"
-            items={["EKIPAZH", "WDS", "VEKA", "ALUMIL"]}
+            items={["EKIPAZH", "WDS", "VEKA", "Prokural"]}
           />
           <div>
             <h4 className="font-display font-bold text-background mb-4">Контакти</h4>

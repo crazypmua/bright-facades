@@ -109,7 +109,7 @@ export function Hero() {
           </p>
           <ul className="reveal reveal-delay-1 mt-5 grid sm:grid-cols-2 gap-x-6 gap-y-2 text-base lg:text-lg text-foreground/80 max-w-xl">
             {[
-              "Металопластикові системи",
+              "Металопластикові конструкції",
               "Алюмінієві системи",
               "Фасадні системи",
               "Суцільноскляні конструкції",
