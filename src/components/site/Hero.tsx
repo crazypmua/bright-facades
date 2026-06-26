@@ -105,7 +105,7 @@ export function Hero() {
             <span className="text-foreground">ELITE</span> <span className="text-primary">SPACE</span>
           </h1>
           <p className="reveal reveal-delay-1 mt-5 font-display text-xl lg:text-2xl font-bold uppercase tracking-wide text-foreground/90">
-            Найбільший виробник світлопрозорих конструкцій в Україні
+            Найбільший виробник<br />світлопрозорих конструкцій в Україні
           </p>
           <ul className="reveal reveal-delay-1 mt-5 grid sm:grid-cols-2 gap-x-6 gap-y-2 text-base lg:text-lg text-foreground/80 max-w-xl">
             {[
