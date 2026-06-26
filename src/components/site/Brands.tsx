@@ -43,7 +43,7 @@ export function Brands() {
               </li>
               <li className="flex items-baseline justify-between">
                 <span className="font-display font-bold text-2xl">Prokural</span>
-                <span className="text-sm text-muted-foreground">Польща</span>
+                <span className="text-sm text-muted-foreground">Польша</span>
               </li>
             </ul>
           </div>

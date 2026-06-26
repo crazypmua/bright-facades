@@ -9,7 +9,7 @@ export const Route = createFileRoute("/aluminum")({
       {
         name: "description",
         content:
-          "Алюмінієві вікна, двері та розсувні системи. Prokural (Польща) та Ekipazh AluLight — преміум для архітектурних рішень.",
+          "Алюмінієві вікна, двері та розсувні системи. Prokural (Польша) та Ekipazh AluLight — преміум для архітектурних рішень.",
       },
       { property: "og:title", content: "Алюмінієві системи — Elite Space" },
       { property: "og:description", content: "Prokural та Ekipazh AluLight — холодні та теплі системи." },
@@ -24,7 +24,7 @@ function AluminumPage() {
       eyebrow="Алюміній"
       title="Алюмінієві системи"
       subtitle="Великі скління, чисті лінії та архітектурна свобода"
-      intro="Холодні та теплі алюмінієві системи від Prokural (Польща) та Ekipazh AluLight — для приватних будинків, ресторанів, офісів та комерційних об'єктів."
+      intro="Холодні та теплі алюмінієві системи від Prokural (Польша) та Ekipazh AluLight — для приватних будинків, ресторанів, офісів та комерційних об'єктів."
       heroImage={heroImg}
       products={[
         {
@@ -35,33 +35,33 @@ function AluminumPage() {
         },
         {
           name: "Prokural S77",
-          origin: "Prokural · Польща",
+          origin: "Prokural · Польша",
           description: "Тепла система з терморозривом для енергоефективних будинків.",
           features: ["Монтажна ширина 77 мм", "Ud до 1,0 Вт/м²К", "Скло до 56 мм"],
           badge: "Преміум",
         },
         {
           name: "Prokural SMARTIA M630",
-          origin: "Prokural · Польща",
+          origin: "Prokural · Польша",
           description: "Преміальна розсувна система для панорамних терас.",
           features: ["Скління до 6 м", "Підйомно-розсувна", "Низький поріг"],
           badge: "Хіт",
         },
         {
           name: "Prokural SUPREME S650",
-          origin: "Prokural · Польща",
+          origin: "Prokural · Польша",
           description: "Топова система пасивного дому з мінімалістичним дизайном.",
           features: ["Монтажна ширина 76 мм", "3 ущільнювачі", "Прихована стулка"],
         },
         {
           name: "Розсувний портал Prokural",
-          origin: "Prokural · Польща",
+          origin: "Prokural · Польша",
           description: "Безрамкові розсувні системи для максимальної панорами.",
           features: ["Скло до 48 мм", "Електропривід опція", "Антимоскітна сітка"],
         },
         {
           name: "Зимовий сад",
-          origin: "Prokural · Польща",
+          origin: "Prokural · Польша",
           description: "Комплексні рішення для прибудов та зимових садів під ключ.",
           features: ["Скляний дах", "Інтегрована вентиляція", "Сонцезахист"],
         },
